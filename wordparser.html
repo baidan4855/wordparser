@@ -1,0 +1,45 @@
+<head>
+    <title>wordparser</title>
+</head>
+
+<body>
+<h1>Welcome to Meteor!</h1>
+{{> hello}}
+<hr>
+{{> words}}
+</body>
+
+<template name="hello">
+    <div class="row">
+        <div class="col-xs-9">
+            <textarea id="uContent"></textarea>
+        </div>
+        <div class="col-xs-3">
+            <button class="btn btn-success">Click Me</button>
+        </div>
+    </div>
+</template>
+
+<template name="words">
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="preview">
+                {{#each userContent}}
+                    <span class="{{c}}">{{w}}</span>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="word-list">
+                <ol>
+                    {{#each segments}}
+                        <li>
+                            词:<a href="#">{{w}}</a>, 命中:[{{h}}]次
+                        </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</template>
