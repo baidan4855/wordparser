@@ -55,10 +55,9 @@ if (Meteor.isClient) {
             if (ggs[i].w=== key[0]) {
                 if(key.length === 1){
                     ggs[i].c="hl";
-                    break;
+                }else{
+                    firstLocations.push(i);
                 }
-                firstLocations.push(i);
-                break;
             }
         }
         if (firstLocations.length) {
