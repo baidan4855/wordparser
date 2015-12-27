@@ -3,7 +3,7 @@
 </head>
 
 <body>
-<h1>Welcome to Meteor!</h1>
+<h1>词频分析工具</h1>
 {{> hello}}
 <hr>
 {{> words}}
@@ -15,7 +15,10 @@
             <textarea id="uContent"></textarea>
         </div>
         <div class="col-xs-3">
-            <button class="btn btn-success">Click Me</button>
+            <label for="stripPunctuation">忽略标点:</label>
+            <input id="stripPunctuation" type="checkbox" checked/>
+            <br>
+            <button class="btn btn-success">提交</button>
         </div>
     </div>
 </template>
@@ -24,9 +27,7 @@
     <div class="row">
         <div class="col-xs-9">
             <div class="preview">
-                {{#each userContent}}
-                    <span class="{{c}}">{{w}}</span>
-                {{/each}}
+                {{#each userContent}}<span class="{{c}}">{{w}}</span>{{/each}}
             </div>
         </div>
         <div class="col-xs-3">
@@ -34,7 +35,7 @@
                 <ol>
                     {{#each segments}}
                         <li>
-                            词:<a href="#">{{w}}</a>, 命中:[{{h}}]次
+                            词:<a href="#" class="{{isHl}}">{{w}}</a>, 命中:[{{h}}]次
                         </li>
                     {{/each}}
                 </ol>

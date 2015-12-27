@@ -21,6 +21,8 @@
         <item url="file://$USER_HOME$/.meteor/packages/id-map/1.0.4/web.browser/packages/id-map.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/deprecated.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/jt6562_bootstrap-3-switch/3.3.2/web.browser/js/bootstrap-switch.min.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/jt6562_bootstrap-3-switch/3.3.2/web.browser/css/bootstrap-switch.min.css" />
         <item url="file://$USER_HOME$/.meteor/packages/babel-runtime/0.1.4/web.browser/packages/babel-runtime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/tracker.js" />
         <item url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.4/web.browser/packages/geojson-utils.js" />
@@ -81,6 +83,8 @@
       <root url="file://$USER_HOME$/.meteor/packages/id-map/1.0.4/web.browser/packages/id-map.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/deprecated.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/jt6562_bootstrap-3-switch/3.3.2/web.browser/js/bootstrap-switch.min.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/jt6562_bootstrap-3-switch/3.3.2/web.browser/css/bootstrap-switch.min.css" />
       <root url="file://$USER_HOME$/.meteor/packages/babel-runtime/0.1.4/web.browser/packages/babel-runtime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/tracker.js" />
       <root url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.4/web.browser/packages/geojson-utils.js" />

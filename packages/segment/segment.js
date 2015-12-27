@@ -11,7 +11,7 @@ Meteor.methods({
     'segment':function(str,options){
         if(!str)
             return [];
-        var segs = _segment.doSegment(str);
+        var segs = _segment.doSegment(str,options);
         if(!_.isEmpty(segs)){
             var uniqueArr = function(arr) {
                 var res = [], hash = {};

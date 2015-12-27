@@ -1,6 +1,7 @@
 if (Meteor.isClient) {
     var uContent = new ReactiveVar();
     var raResult = new ReactiveVar();
+    var currHl = new ReactiveVar();
     Template.hello.events({
         'click button': function (e, t) {
             var uc = t.$('#uContent').val();
@@ -8,7 +9,8 @@ if (Meteor.isClient) {
                 console.log("您没有输入内容");
                 return;
             }
-            Meteor.call('segment', uc, function (err, result) {
+            var option = {'stripPunctuation':t.$('#stripPunctuation').is(':checked')};
+            Meteor.call('segment', uc, option, function (err, result) {
                 if (err) {
                     console.log("发生错误!");
                     console.log(err);
@@ -29,12 +31,16 @@ if (Meteor.isClient) {
         },
         userContent: function () {
             return uContent.get();
+        },
+        isHl:function(){
+            return this.w === currHl.get()?"hl":"";
         }
     })
 
     Template.words.events({
         'click a':function(e,t){
             resethl();
+            currHl.set(this.w);
             highlight(this.w)
         }
     })
@@ -42,6 +48,7 @@ if (Meteor.isClient) {
     var resethl=function(){
         var ggs = uContent.get();
         if(_.isEmpty(ggs)) return;
+        currHl.set(undefined);
         uContent.set(_.map(ggs,function(uc){
             delete uc.c;
             return uc;
