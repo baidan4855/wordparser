@@ -1,35 +1,38 @@
 <template name="inputPanel">
-    <div class="row">
-        <div class="col-xs-9">
-            <textarea id="uContent"></textarea>
-        </div>
-        <div class="col-xs-3">
-            <label for="stripPunctuation">忽略标点:</label>
-            <input id="stripPunctuation" type="checkbox" checked/>
-            <br>
-            <button class="btn btn-success">提交</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-9">
+                <textarea id="uContent"></textarea>
+            </div>
+            <div class="col-xs-3">
+                <label for="stripPunctuation">忽略标点:</label>
+                <input id="stripPunctuation" type="checkbox" checked/>
+                <br>
+                <button class="btn btn-success">提交</button>
+            </div>
         </div>
     </div>
 </template>
 
 <template name="words">
-    <div class="row">
-        <div class="col-xs-9">
-            <div class="preview">
-                {{#each userContent}}<span class="{{c}}">{{w}}</span>{{/each}}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-9">
+                <div class="preview">
+                    {{#each userContent}}<span class="{{c}}">{{w}}</span>{{/each}}
+                </div>
             </div>
-        </div>
-        <div class="col-xs-3">
-            <div class="word-list">
-                <ol>
-                    {{#each segments}}
-                        <li>
-                            <a href="#" class="{{isHl}}">{{w}}</a> [{{h}}]
-                        </li>
-                    {{/each}}
-                </ol>
+            <div class="col-xs-3">
+                <div class="word-list">
+                    <ol>
+                        {{#each segments}}
+                            <li>
+                                <a href="#" class="{{isHl}}">{{w}}</a> [{{h}}]
+                            </li>
+                        {{/each}}
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
-
 </template>
