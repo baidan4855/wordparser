@@ -1,15 +1,4 @@
-<head>
-    <title>wordparser</title>
-</head>
-
-<body>
-<h1>词频分析工具</h1>
-{{> hello}}
-<hr>
-{{> words}}
-</body>
-
-<template name="hello">
+<template name="inputPanel">
     <div class="row">
         <div class="col-xs-9">
             <textarea id="uContent"></textarea>
@@ -35,7 +24,7 @@
                 <ol>
                     {{#each segments}}
                         <li>
-                            词:<a href="#" class="{{isHl}}">{{w}}</a>, 命中:[{{h}}]次
+                            <a href="#" class="{{isHl}}">{{w}}</a> [{{h}}]
                         </li>
                     {{/each}}
                 </ol>
