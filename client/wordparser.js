@@ -20,6 +20,22 @@ Template.inputPanel.events({
             })
             uContent.set(ucArr);
             raResult.set(result);
+            var list = [];
+            if (!_.isEmpty(result)) {
+                list = _.map(result, function (obj) {
+                    return [obj.w, obj.h];
+                })
+            }
+            WordCloud(document.getElementById('word-cloud'), {
+                list: list,
+                //backgroundColor: "#ffe0e0",
+                fontFamily: "Times, serif",
+                gridSize: Math.round(16 * $('#word-cloud').width() / 1024),
+                weightFactor: function (size) {
+                    return size * $('#word-cloud').width() / 102;
+                },
+                rotateRatio: 0.5
+            });
         })
     }
 });

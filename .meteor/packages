@@ -22,7 +22,6 @@ segment
 reactive-var
 twbs:bootstrap
 underscore
-jt6562:bootstrap-3-switch
 kadira:flow-router
 kadira:blaze-layout
 meteorhacks:subs-manager
